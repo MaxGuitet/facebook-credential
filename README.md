@@ -1,0 +1,4 @@
+- Explain how to install
+- Explain need to set ServiceConfiguration
+- Explain how to use
+- Give example of graph call using npm fbgraph
