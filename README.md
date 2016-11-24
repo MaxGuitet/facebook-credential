@@ -55,7 +55,7 @@ Once you have obtained the credentials, you can make API calls using the `access
 There are several packages to be used to simplify the use of the API such as [fbgraph](https://www.npmjs.com/package/fbgraph)
 
 ##### example
-```
+```javascript
 // server side, assumes fbgraph has been installed with 'npm install -S fbgraph'
 import graph from 'fbgraph';
 
