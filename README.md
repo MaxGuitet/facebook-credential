@@ -38,7 +38,7 @@ import { getFacebookCredential } from 'meteor/maxcs:fb-credential';
 
 Template.myTemplate.events({
   'click #connect-to-facebook': function(event) {
-    getFacebookCredential(['user\_photos', 'user\_posts'], function(err, res) {
+    getFacebookCredential(['user_photos', 'user_posts'], function(err, res) {
       if(err) {
         // Notify user of error
       } else {
