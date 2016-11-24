@@ -1,10 +1,10 @@
 Package.describe({
-  name: 'maxcs:fb-credentials',
+  name: 'maxcs:fb-credential',
   version: '0.0.1',
   // Brief, one-line summary of the package.
   summary: 'Uses the native facebook package to adds the facebook service object for an already logged in user.',
   // URL to the Git repository containing the source code for this package.
-  git: '',
+  git: 'https://github.com/MaxGuitet/fb-credentials',
   // By default, Meteor will default to using README.md for documentation.
   // To avoid submitting documentation, set this field to null.
   documentation: 'README.md'
@@ -17,15 +17,9 @@ Package.onUse(function(api) {
     'check',
     'ecmascript',
     'facebook',
-
-    'deanius:promise@3.1.3'
+    'service-configuration',
+    'underscore',
   ]);
-  api.mainModule('api-connect-fb.js');
-});
-
-Package.onTest(function(api) {
-  api.use('ecmascript');
-  api.use('tinytest');
-  api.use('fb-credentials');
-  api.mainModule('fb-credentials-tests.js');
+  api.mainModule('fb-credential-client.js', 'client');
+  api.mainModule('fb-credential-server.js', 'server');
 });
