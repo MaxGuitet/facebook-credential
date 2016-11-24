@@ -32,7 +32,7 @@ set the `services.facebook` object on the login user.
 - `permissions`: (optional) array of strings of the permissions to ask the user for (see full list on [facebook dev website](https://developers.facebook.com/docs/facebook-login/permissions)). Default permissions are 'public profile' and 'email address'.
 - `callback(error, result)`: (optional) a function to be called on completion. `result` will be the number of `Meteor.users` affected (normally 1).
 
-##### exemple:
+##### example:
 ```javascript
 import { getFacebookCredential } from 'meteor/maxcs:fb-credential';
 
