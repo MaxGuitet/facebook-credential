@@ -6,7 +6,7 @@ I wrote this small package which is simply a wrapper of the OAuth methods from t
 
 ### How to install
 The package has not been published yet to Atmosphere. If you want to use it, simply clone the repository in your `packages` folder
-and add `maxcs:fb-credential` in the `.meteor/packages` file.
+and add `maxcs:facebook-credential` in the `.meteor/packages` file.
 
 ### Setup
 To use the facebook client, you will need to set up the `ServiceConfiguration` for Facebook in your app [see Meteor Guide](https://docs.meteor.com/api/accounts.html#service-configuration)
@@ -34,7 +34,7 @@ set the `services.facebook` object on the login user.
 
 ##### example:
 ```javascript
-import { getFacebookCredential } from 'meteor/maxcs:fb-credential';
+import { getFacebookCredential } from 'meteor/maxcs:facebook-credential';
 
 Template.myTemplate.events({
   'click #connect-to-facebook': function(event) {
