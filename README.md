@@ -9,7 +9,7 @@ The package has not been published yet to Atmosphere. If you want to use it, sim
 and add `maxcs:facebook-credential` in the `.meteor/packages` file.
 
 ### Setup
-To use the facebook client, you will need to set up the `ServiceConfiguration` for Facebook in your app [see Meteor Guide](https://docs.meteor.com/api/accounts.html#service-configuration)
+To use the facebook client, you will need to set up the `ServiceConfiguration` for Facebook in your app ([see Meteor Guide](https://docs.meteor.com/api/accounts.html#service-configuration))
 
 ```javascript
 import { ServiceConfiguration } from 'meteor/service-configuration';
@@ -27,8 +27,7 @@ ServiceConfiguration.configurations.upsert({
 ````
 
 ### How to use
-The package provide a simple function `getFacebookCredential([permissions], [callback])` that will trigger the login process and on completion,
-set the `services.facebook` object on the login user.
+The package provide a simple function `getFacebookCredential([permissions], [callback])` that will trigger the login process and on completion, set the `services.facebook` object on the logged in user.
 - `permissions`: (optional) array of strings of the permissions to ask the user for (see full list on [facebook dev website](https://developers.facebook.com/docs/facebook-login/permissions)). Default permissions are 'public profile' and 'email address'.
 - `callback(error, result)`: (optional) a function to be called on completion. `result` will be the number of `Meteor.users` affected (normally 1).
 
@@ -48,7 +47,7 @@ Template.myTemplate.events({
     return;
   }
 });
-````
+```
 
 ### What to do next?
 Once you have obtained the credentials, you can make API calls using the `accessToken` stored on the user's object.
@@ -68,7 +67,7 @@ graph.setAccessToken(accessToken);
 graph.get("/me", function(err, res) {
   console.log(res); // User facebook object
 });
-````
+```
 
 ### License
 Copyright (c) 2016 Maxime Guitet
